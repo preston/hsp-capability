@@ -1,0 +1,449 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Root schema.",
+    "description": "An explanation about the purpose of this instance.",
+    "properties": {
+        "schema": {
+            "type": "integer",
+            "title": "Schema schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 1,
+            "id": "schema"
+        },
+        "service": {
+            "type": "object",
+            "title": "Service schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "properties": {
+                "uri": {
+                    "type": "string",
+                    "title": "Uri schema.",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "https://prestonlee.com/hsp/hello-world",
+                    "id": "uri"
+                },
+                "support_url": {
+                    "type": "string",
+                    "title": "Support_url schema.",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "https://prestonlee.com",
+                    "id": "support_url"
+                },
+                "name": {
+                    "type": "object",
+                    "title": "Name schema.",
+                    "description": "An explanation about the purpose of this instance.",
+                    "properties": {
+                        "en": {
+                            "type": "string",
+                            "title": "En schema.",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "Preston's Hello World App",
+                            "id": "en"
+                        }
+                    },
+                    "id": "name",
+                    "required": [
+                        "en"
+                    ]
+                },
+                "version": {
+                    "type": "object",
+                    "title": "Version schema.",
+                    "description": "An explanation about the purpose of this instance.",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "title": "Name schema.",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "v1.3.42",
+                            "id": "name"
+                        },
+                        "ordinal": {
+                            "type": "string",
+                            "title": "Ordinal schema.",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "001.003.042",
+                            "id": "ordinal"
+                        }
+                    },
+                    "id": "version",
+                    "required": [
+                        "name",
+                        "ordinal"
+                    ]
+                },
+                "commit": {
+                    "type": "string",
+                    "title": "Commit schema.",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "73f9f271ab6bf0b109fd5deddac47eb0d212456f",
+                    "id": "commit"
+                },
+                "created_at": {
+                    "type": "string",
+                    "title": "Created_at schema.",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "2016-10-14T17:28:03.343+00:00",
+                    "id": "created_at"
+                }
+            },
+            "id": "service",
+            "required": [
+                "uri",
+                "support_url",
+                "name",
+                "version",
+                "commit",
+                "created_at"
+            ]
+        },
+        "exposures": {
+            "type": "array",
+            "title": "Exposures schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "items": {
+                "type": "object",
+                "title": "0 schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "properties": {
+                    "uri": {
+                        "type": "string",
+                        "title": "Uri schema.",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "hspc://hsp/conformance/configuration/smart-on-fhir/v1",
+                        "id": "uri"
+                    },
+                    "name": {
+                        "type": "object",
+                        "title": "Name schema.",
+                        "description": "An explanation about the purpose of this instance.",
+                        "properties": {
+                            "en": {
+                                "type": "string",
+                                "title": "En schema.",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "Hello Web UI!",
+                                "id": "en"
+                            }
+                        },
+                        "id": "name",
+                        "required": [
+                            "en"
+                        ]
+                    },
+                    "configuration": {
+                        "type": "object",
+                        "title": "Configuration schema.",
+                        "description": "An explanation about the purpose of this instance.",
+                        "properties": {
+                            "default": {
+                                "type": "object",
+                                "title": "Default schema.",
+                                "description": "An explanation about the purpose of this instance.",
+                                "properties": {
+                                    "client_id": {
+                                        "type": "string",
+                                        "title": "Client_id schema.",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "SMART_ON_FHIR_CLIENT_ID",
+                                        "id": "client_id"
+                                    },
+                                    "client_secret": {
+                                        "type": "string",
+                                        "title": "Client_secret schema.",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "SMART_ON_FHIR_CLIENT_SECRET",
+                                        "id": "client_secret"
+                                    }
+                                },
+                                "id": "default",
+                                "required": [
+                                    "client_id",
+                                    "client_secret"
+                                ]
+                            },
+                            "worker": {
+                                "type": "object",
+                                "title": "Worker schema.",
+                                "description": "An explanation about the purpose of this instance.",
+                                "properties": {},
+                                "id": "worker"
+                            }
+                        },
+                        "id": "configuration",
+                        "required": [
+                            "default",
+                            "worker"
+                        ]
+                    }
+                },
+                "id": "0",
+                "required": [
+                    "uri",
+                    "name",
+                    "configuration"
+                ]
+            },
+            "id": "exposures"
+        },
+        "dependencies": {
+            "type": "array",
+            "title": "Dependencies schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "items": {
+                "type": "object",
+                "title": "1 schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "Name schema.",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "PostgreSQL Database",
+                        "id": "name"
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Type schema.",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "hspc://hsp/conformance/configuration/database/postgresql",
+                        "id": "type"
+                    },
+                    "configuration": {
+                        "type": "object",
+                        "title": "Configuration schema.",
+                        "description": "An explanation about the purpose of this instance.",
+                        "properties": {
+                            "default": {
+                                "type": "object",
+                                "title": "Default schema.",
+                                "description": "An explanation about the purpose of this instance.",
+                                "properties": {
+                                    "name": {
+                                        "type": "object",
+                                        "title": "Name schema.",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "properties": {
+                                            "en": {
+                                                "type": "string",
+                                                "title": "En schema.",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "Web Process",
+                                                "id": "en"
+                                            }
+                                        },
+                                        "id": "name",
+                                        "required": [
+                                            "en"
+                                        ]
+                                    },
+                                    "url": {
+                                        "type": "string",
+                                        "title": "Url schema.",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "HELLO_WORLD_DATABASE_URL",
+                                        "id": "url"
+                                    }
+                                },
+                                "id": "default",
+                                "required": [
+                                    "name",
+                                    "url"
+                                ]
+                            },
+                            "rake db:seed": {
+                                "type": "object",
+                                "title": "Rake db:seed schema.",
+                                "description": "An explanation about the purpose of this instance.",
+                                "properties": {
+                                    "name": {
+                                        "type": "object",
+                                        "title": "Name schema.",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "properties": {
+                                            "en": {
+                                                "type": "string",
+                                                "title": "En schema.",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "Database Setup",
+                                                "id": "en"
+                                            }
+                                        },
+                                        "id": "name",
+                                        "required": [
+                                            "en"
+                                        ]
+                                    }
+                                },
+                                "id": "rake db:seed",
+                                "required": [
+                                    "name"
+                                ]
+                            },
+                            "rake test": {
+                                "type": "object",
+                                "title": "Rake test schema.",
+                                "description": "An explanation about the purpose of this instance.",
+                                "properties": {
+                                    "name": {
+                                        "type": "object",
+                                        "title": "Name schema.",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "properties": {
+                                            "en": {
+                                                "type": "string",
+                                                "title": "En schema.",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "Regression Test Suite & Dependency Checking",
+                                                "id": "en"
+                                            }
+                                        },
+                                        "id": "name",
+                                        "required": [
+                                            "en"
+                                        ]
+                                    },
+                                    "url": {
+                                        "type": "string",
+                                        "title": "Url schema.",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "HELLO_WORLD_DATABASE_TEST_URL",
+                                        "id": "url"
+                                    }
+                                },
+                                "id": "rake test",
+                                "required": [
+                                    "name",
+                                    "url"
+                                ]
+                            }
+                        },
+                        "id": "configuration",
+                        "required": [
+                            "default",
+                            "rake db:seed",
+                            "rake test"
+                        ]
+                    }
+                },
+                "id": "1",
+                "required": [
+                    "name",
+                    "type",
+                    "configuration"
+                ]
+            },
+            "id": "dependencies"
+        },
+        "templates": {
+            "type": "array",
+            "title": "Templates schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "items": {
+                "type": "object",
+                "title": "0 schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "properties": {
+                    "default": {
+                        "type": "object",
+                        "title": "Default schema.",
+                        "description": "An explanation about the purpose of this instance.",
+                        "properties": {
+                            "tasks": {
+                                "type": "object",
+                                "title": "Tasks schema.",
+                                "description": "An explanation about the purpose of this instance.",
+                                "properties": {
+                                    "default": {
+                                        "type": "object",
+                                        "title": "Default schema.",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "properties": {
+                                            "minimum": {
+                                                "type": "integer",
+                                                "title": "Minimum schema.",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 1,
+                                                "id": "minimum"
+                                            },
+                                            "maximum": {
+                                                "type": "integer",
+                                                "title": "Maximum schema.",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 8,
+                                                "id": "maximum"
+                                            },
+                                            "memory": {
+                                                "type": "integer",
+                                                "title": "Memory schema.",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 1024,
+                                                "id": "memory"
+                                            }
+                                        },
+                                        "id": "default",
+                                        "required": [
+                                            "minimum",
+                                            "maximum",
+                                            "memory"
+                                        ]
+                                    },
+                                    "worker": {
+                                        "type": "object",
+                                        "title": "Worker schema.",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "properties": {
+                                            "minimum": {
+                                                "type": "integer",
+                                                "title": "Minimum schema.",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 1,
+                                                "id": "minimum"
+                                            }
+                                        },
+                                        "id": "worker",
+                                        "required": [
+                                            "minimum"
+                                        ]
+                                    }
+                                },
+                                "id": "tasks",
+                                "required": [
+                                    "default",
+                                    "worker"
+                                ]
+                            }
+                        },
+                        "id": "default",
+                        "required": [
+                            "tasks"
+                        ]
+                    },
+                    "epic": {
+                        "type": "object",
+                        "title": "Epic schema.",
+                        "description": "An explanation about the purpose of this instance.",
+                        "properties": {},
+                        "id": "epic"
+                    }
+                },
+                "id": "0",
+                "required": [
+                    "default",
+                    "epic"
+                ]
+            },
+            "id": "templates"
+        }
+    },
+    "id": "/",
+    "required": [
+        "schema",
+        "service",
+        "exposures",
+        "dependencies",
+        "templates"
+    ]
+}
