@@ -1,25 +1,20 @@
-{
+var example = {
     "schema": 1, // Required -- Version of the conformance schema to which we're authoring.
-    "product": {
+    "service": {
         "uri": "https://prestonlee.com/hsp/hello-world", // Required -- stable ID across all versions.
         "support_url": "https://prestonlee.com", // Required -- where to get support, such as the vendor's website.
         "name": {
             "en": "Preston's Hello World App", // English is always required -- May change across builds. Other localizations are optional.
-        }
-    }
-    "build": {
+        },
         "version": {
-            "major": 1,
-            "minor": 3,
-            "patch": 42,
-            "name": "v1.3.42" // Required -- freeform
+            "name": "v1.3.42", // Required -- freeform
             "ordinal": "001.003.042" // Optional - For sorting purposes. Can be used to determine "v1.x or later".
         },
         "commit": "73f9f271ab6bf0b109fd5deddac47eb0d212456f",
         "created_at": "2016-10-14T17:28:03.343+00:00", // Required -- RFC3339
     },
-    "provides": [{
-        "uri": "hspc://hsp/conformance/configuration/smart-on-fhir/v1" // Required -- we're a SMART-on-FHIR webapp in this example
+    "exposures": [{
+        "uri": "hspc://hsp/conformance/configuration/smart-on-fhir/v1", // Required -- we're a SMART-on-FHIR webapp in this example
         "name": {
             "en": "Hello Web UI!" // Required
         },
@@ -33,7 +28,7 @@
             }
         }
     }],
-    "requires": [{
+    "dependencies": [{
         "type": "hspc://hsp/conformance/configuration/smtp", // Required -- microschema URI
         "name": "Outbound Email", // Required -- String label
         "configuration": { // Required ENV variables -- specific to the microschema. Values will be automatically determined at runtime.
@@ -68,19 +63,19 @@
             }
         }
     }],
-    "modes": [ // Required -- The requirements of the environment the container(s) are run upon.
+    "templates": [ // Required -- The requirements of the environment the container(s) are run upon.
         {
             "default": { // Required -- Production needs
-                "tasks": [
+                "tasks": {
                     "default": { // Reference to the "default" provided task.
                         "minimum": 1, // Optional number of instances.
                         "maximum": 8, // For orchestration autoscaling.
                         "memory": 1024 // In MiBs.
-                    }
+                    },
                     "worker": {
                         "minimum": 1
                     }
-                ]
+                }
             },
             "epic": { // Does NOT inherit defaults.
                 // ...larger numbers than "default"...
@@ -89,3 +84,4 @@
         }
     ]
 }
+print(JSON.stringify(example));
