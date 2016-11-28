@@ -28,6 +28,9 @@ var example = {
             }
         }
     }],
+	"permissions": [
+		"TODO"
+	]
     "dependencies": [{
         "type": "hspc://hsp/conformance/configuration/smtp", // Required -- microschema URI
         "name": "Outbound Email", // Required -- String label
@@ -84,4 +87,4 @@ var example = {
         }
     ]
 }
-print(JSON.stringify(example));
+print(JSON.stringify(example, null, "\t"));
